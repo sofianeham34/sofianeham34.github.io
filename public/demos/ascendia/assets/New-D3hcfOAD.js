@@ -1,0 +1,89 @@
+import{r as i,j as e}from"./main-C5khXTpE.js";import{D}from"./datetime-C2bT2-yf.js";import{F as Z,a as q,b as K}from"./index-DYE3m0aO.js";import{a as P}from"./axios-BuFFa15f.js";import{B as X}from"./BarreHaut-DvcUvKTc.js";import{S as G}from"./SideBarPublication-BOa1ZAgf.js";import{P as Q}from"./Previsualisation-Ci4Gffg7.js";import"./index-B2MERwEO.js";/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const Y=o=>o.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase(),ee=o=>o.replace(/^([A-Z])|[\s-_]+(\w)/g,(l,m,u)=>u?u.toUpperCase():m.toLowerCase()),L=o=>{const l=ee(o);return l.charAt(0).toUpperCase()+l.slice(1)},R=(...o)=>o.filter((l,m,u)=>!!l&&l.trim()!==""&&u.indexOf(l)===m).join(" ").trim();/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */var te={xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round"};/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const se=i.forwardRef(({color:o="currentColor",size:l=24,strokeWidth:m=2,absoluteStrokeWidth:u,className:v="",children:c,iconNode:j,...x},C)=>i.createElement("svg",{ref:C,...te,width:l,height:l,stroke:o,strokeWidth:u?Number(m)*24/Number(l):m,className:R("lucide",v),...x},[...j.map(([b,w])=>i.createElement(b,w)),...Array.isArray(c)?c:[c]]));/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const k=(o,l)=>{const m=i.forwardRef(({className:u,...v},c)=>i.createElement(se,{ref:c,iconNode:l,className:R(`lucide-${Y(L(o))}`,`lucide-${o}`,u),...v}));return m.displayName=L(o),m};/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const ne=[["path",{d:"M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8",key:"mg9rjx"}]],ae=k("bold",ne);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const re=[["path",{d:"M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49",key:"ct8e1f"}],["path",{d:"M14.084 14.158a3 3 0 0 1-4.242-4.242",key:"151rxh"}],["path",{d:"M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143",key:"13bj9a"}],["path",{d:"m2 2 20 20",key:"1ooewy"}]],oe=k("eye-off",re);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const le=[["line",{x1:"19",x2:"10",y1:"4",y2:"4",key:"15jd3p"}],["line",{x1:"14",x2:"5",y1:"20",y2:"20",key:"bu0au3"}],["line",{x1:"15",x2:"9",y1:"4",y2:"20",key:"uljnxc"}]],ie=k("italic",le);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const ce=[["path",{d:"m5 8 6 6",key:"1wu5hv"}],["path",{d:"m4 14 6-6 2-3",key:"1k1g8d"}],["path",{d:"M2 5h12",key:"or177f"}],["path",{d:"M7 2h1",key:"1t2jsx"}],["path",{d:"m22 22-5-10-5 10",key:"don7ne"}],["path",{d:"M14 18h6",key:"1m8k6r"}]],de=k("languages",ce);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const ue=[["path",{d:"M13.234 20.252 21 12.3",key:"1cbrk9"}],["path",{d:"m16 6-8.414 8.586a2 2 0 0 0 0 2.828 2 2 0 0 0 2.828 0l8.414-8.586a4 4 0 0 0 0-5.656 4 4 0 0 0-5.656 0l-8.415 8.585a6 6 0 1 0 8.486 8.486",key:"1pkts6"}]],me=k("paperclip",ue);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const pe=[["path",{d:"M6 4v6a6 6 0 0 0 12 0V4",key:"9kb039"}],["line",{x1:"4",x2:"20",y1:"20",y2:"20",key:"nun2al"}]],he=k("underline",pe);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const xe=[["path",{d:"m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72",key:"ul74o6"}],["path",{d:"m14 7 3 3",key:"1r5n42"}],["path",{d:"M5 6v4",key:"ilb8ba"}],["path",{d:"M19 14v4",key:"blhpug"}],["path",{d:"M10 2v2",key:"7u0qdc"}],["path",{d:"M7 8H3",key:"zfb6yr"}],["path",{d:"M21 16h-4",key:"1cnmox"}],["path",{d:"M11 3H9",key:"1obp7u"}]],fe=k("wand-sparkles",xe);/**
+ * @license lucide-react v0.484.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const ge=[["path",{d:"M18 6 6 18",key:"1bl5f8"}],["path",{d:"m6 6 12 12",key:"d8bk6v"}]],be=k("x",ge);function ve({setNetworks:o,setInfoComptes:l}){const[m,u]=i.useState([]),[v,c]=i.useState({}),[j,x]=i.useState({}),[C,b]=i.useState([]),[w,N]=i.useState(null);i.useEffect(()=>{(async()=>{const p=localStorage.getItem("token"),d=localStorage.getItem("user_id");if(!(!p||!d))try{const{data:h}=await P.get(`/api/socialAuth/${d}`,{headers:{Authorization:`Bearer ${p}`}}),f={},E=h.map((S,F)=>(S.provider==="facebook"&&(f[F]=S.pages||[]),{id:F,provider:S.provider}));c(f),u(E)}catch(h){console.error("Erreur fetch socialAuth :",h)}})()},[]),i.useEffect(()=>{const s=m.filter(p=>C.includes(p.id)).map(p=>p.provider);o?.(s)},[C,m,o]);const I=s=>{b(p=>p.includes(s)?p.filter(d=>d!==s):[...p,s])},M=(s,p)=>{if(x(d=>({...d,[s]:p})),!p){b(d=>d.filter(h=>h!==s)),l?.(d=>{const h={...d};return delete h[s],h}),N(null);return}l?.(d=>({...d,[s]:p})),b(d=>d.includes(s)?d:[...d,s]),N(null)},A=s=>{switch(s){case"facebook":return e.jsx(K,{className:"text-blue-600 text-2xl"});case"instagram":return e.jsx(q,{className:"text-pink-500 text-2xl"});case"twitter":return e.jsx(Z,{className:"text-blue-400 text-2xl"});default:return s}};return e.jsxs("div",{children:[e.jsx("label",{className:"block text-gray-700 text-lg mb-2",children:"Sélectionnez des comptes :"}),e.jsx("div",{className:"flex flex-wrap gap-4",children:m.map(s=>{const p=s.provider==="facebook";v[s.id]?.length>0;const d=C.includes(s.id);return e.jsx("div",{className:`p-3 rounded-md cursor-pointer border transition-all duration-200 ${d?"bg-blue-100 border-blue-500 shadow-md scale-105":"bg-white border-gray-300 hover:shadow"}`,onClick:()=>{p?d?(x(h=>{const f={...h};return delete f[s.id],f}),b(h=>h.filter(f=>f!==s.id)),l?.(h=>{const f={...h};return delete f[s.id],f})):N(s.id):I(s.id)},children:e.jsx("div",{className:"flex items-center gap-2",children:A(s.provider)})},s.id)})}),w!==null&&e.jsx("div",{className:"fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50",children:e.jsxs("div",{className:"bg-white p-6 rounded-lg shadow-lg w-full max-w-md",children:[e.jsx("h2",{className:"text-lg font-bold mb-4",children:"Sélectionnez une page Facebook :"}),e.jsxs("select",{className:"border border-gray-300 rounded px-3 py-2 w-full",value:j[w]??"",onChange:s=>M(w,s.target.value),children:[e.jsx("option",{value:"",children:"-- Choisir une page --"}),v[w]?.map(s=>e.jsx("option",{value:s.id,children:s.name},s.id))]}),e.jsx("button",{onClick:()=>N(null),className:"mt-4 w-full bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400",children:"Annuler"})]})})]})}const ye=({gestionFichier:o})=>{const[l,m]=i.useState(null),u=c=>{const j=c.target.files[0];j&&(m(j),o(j))},v=()=>{m(null),o(null)};return e.jsxs("div",{className:"relative w-fit",children:[e.jsxs("label",{htmlFor:"fileInput",className:"flex items-center gap-2 px-4 py-3 bg-[#FF0035] text-white font-medium rounded-lg cursor-pointer hover:bg-red-700 text-base",children:[e.jsx(me,{className:"w-5 h-5"}),"Ajouter un fichier"]}),e.jsx("input",{id:"fileInput",type:"file",accept:"image/*,video/*",onChange:u,className:"hidden"}),l&&e.jsxs("div",{className:"mt-2 flex items-center gap-2 bg-gray-100 px-3 py-2 rounded",children:[e.jsx("p",{className:"text-sm text-gray-700",children:l.name}),e.jsx("button",{onClick:v,className:"text-red-500 hover:text-red-700",title:"Supprimer le fichier",children:e.jsx(be,{className:"w-4 h-4"})})]})]})};function ze(){const[o,l]=i.useState(""),m=localStorage.getItem("user_id"),[u,v]=i.useState([]),[c,j]=i.useState(""),[x,C]=i.useState(null),[b,w]=i.useState(""),N=i.useRef(null),[I,M]=i.useState({}),[A,s]=i.useState(""),p={publicite:`Découvrez notre nouveau produit ! 🔥
+[Décrire le produit] 
+
+
+
+#Promo #NouveauProduit #[NomProduit]`,annonce:`Nous avons une grande nouvelle à partager avec vous ! 🎉
+[Faites votre annonce] 
+
+
+
+#Annonce #Important`,evenement:`Rejoignez-nous pour notre événement spécial ce week-end ! 🎈
+ [Parlez de l'évènement] 
+
+
+
+#Événement #Invitation`,promotion:` ⚡  Offre limitée dans le temps ! Profitez de -[x]% sur tout le site aujourd'hui seulement. 
+ [www.exemple.com]
+
+
+
+#BonPlan #PromoDuJour #[NomBoutique] `,sondage:`📊 On a besoin de votre avis ! Préférez-vous [A] ou [B] ? Répondez en commentaire 👇 
+
+
+
+#Sondage #VotreAvisCompte #[ThemeDuSondage]`,retourEvenement:`Merci à tous pour votre présence ce week-end 🙌 Revivez les meilleurs moments en images ! 
+
+
+
+ #AfterEvent #Souvenirs #[NomEvenement]`},d=t=>{l(t.target.value)},h=t=>{const n=t.target.value;if(j(n),n==="best"){const a=F();w(a)}},f=()=>{if(o.trim()===""){alert("Le message ne peut pas être vide !");return}c==="maintenant"?E():c==="planifier"||c==="best"?S():c==="brouillon"||alert("Veuillez sélectionner une action !")},E=async()=>{if(!u.length){alert("Veuillez sélectionner au moins un réseau !");return}try{const t=new FormData;t.append("userId",m),t.append("networks",JSON.stringify(u)),t.append("message",o),x&&t.append("file",x);const n=await P.post("/api/posts",t,{headers:{"Content-Type":"multipart/form-data"}}),a=await n.data;n.data&&console.log("Post publié avec succès :",a),window.location.reload()}catch(t){console.error("Erreur lors de la publication :",t.message)}},S=async()=>{if(!u.length){alert("Veuillez sélectionner au moins un réseau !");return}if(b===""||new Date(b)<new Date){alert("Veuillez choisir une date de planification valide !");return}try{const t=D.fromISO(b,{zone:"Europe/Paris"}).toUTC().toISO(),n=new FormData;n.append("userId",m),u.forEach(r=>{n.append("networks[]",r)}),n.append("message",o),x&&n.append("file",x),n.append("scheduleDate",t);const a=await P.post("/api/posts/schedule",n,{headers:{"Content-Type":"multipart/form-data"}}),y=await a.data;a.data&&console.log("Post planifié avec succès :",y),window.location.reload()}catch(t){console.error("Erreur lors de la planification :",t.message)}},F=()=>{const t=D.now().setZone("Europe/Paris"),n=t.set({hour:12,minute:30,second:0,millisecond:0}),a=t.set({hour:15,minute:0,second:0,millisecond:0}),y=t.set({hour:19,minute:45,second:0,millisecond:0}),r=t.plus({days:1}).set({hour:12,minute:30,second:0,millisecond:0});let g;return t<n?g=n:t<a?g=a:t<y?g=y:g=r,g.toISO({suppressMilliseconds:!0}).slice(0,16)};i.useEffect(()=>(document.body.style.overflow="hidden",()=>{document.body.style.overflow="auto"}),[]),i.useEffect(()=>{console.log("le fichier",x)},[x]),i.useEffect(()=>{c==="planifier"&&N.current&&setTimeout(()=>{try{N.current.showPicker()}catch(t){console.warn("Impossible d'ouvrir le sélecteur de date automatiquement",t)}},100)},[c]);const B=(t,n)=>{const a=r=>String.fromCodePoint(r>=65&&r<=90?r+119808-65:r>=97&&r<=122?r+119834-97:r),y=r=>String.fromCodePoint(r>=65&&r<=90?r+119860-65:r>=97&&r<=122?r+119886-97:r);return t.split("").map(r=>{const g=r.charCodeAt(0);return n==="bold"?a(g):n==="italic"?y(g):r}).join("")},O=t=>t.split("").map(n=>{const a=n.codePointAt(0);return a>=119808&&a<=119833?String.fromCharCode(a-119808+65):a>=119834&&a<=119859?String.fromCharCode(a-119834+97):a>=119860&&a<=119885?String.fromCharCode(a-119860+65):a>=119886&&a<=119911?String.fromCharCode(a-119886+97):n}).join(""),T=t=>t.replace(/[^a-zA-Z]/g,""),_=t=>{const n=document.getElementById("message"),a=n.selectionStart,y=n.selectionEnd,r=n.value.slice(a,y);if(!r)return;let g;if(t==="underline"){const z=r.startsWith("_")&&r.endsWith("_");g=n.value.slice(0,a)+(z?r.slice(1,-1):"_"+r+"_")+n.value.slice(y)}else{const z=O(r),$=B(z,t),H=T(r),W=T($),J=H===W?z:$;g=n.value.slice(0,a)+J+n.value.slice(y)}l(g)},U=async()=>{if(o.trim())try{const n=(await P.post("/api/posts/corriger",{message:o},{headers:{"Content-Type":"application/json"}})).data.message;l(n.replace(/^"(.*)"$/,"$1"))}catch(t){console.error("Erreur lors de la correction :",t),alert("Une erreur est survenue pendant la correction.")}},V=async t=>{if(!(!o.trim()||!t))try{const a=(await P.post("/api/posts/traduire",{message:o,langue:t},{headers:{"Content-Type":"application/json"}})).data.message;l(a.replace(/^"(.*)"$/,"$1"))}catch(n){console.error("Erreur lors de la traduction :",n),alert("Une erreur est survenue pendant la traduction.")}};return e.jsxs("div",{children:[e.jsx(X,{}),e.jsx(G,{}),e.jsx("div",{className:"ml-64 mr-[33.333%] mt-16",children:e.jsx("div",{className:"min-h-screen flex bg-gray-100 overflow-hidden",children:e.jsxs("div",{className:"flex-1 h-screen bg-gray-100 overflow-y-auto p-6",children:[e.jsx(ve,{networks:u,setNetworks:v,setInfoComptes:M}),e.jsxs("div",{className:"mb-4",children:[e.jsx("label",{className:"block mb-2 text-gray-700 font-medium",children:"Choisissez un modèle de message :"}),e.jsx("div",{className:"flex gap-3 flex-wrap",children:Object.keys(p).map(t=>e.jsx("button",{onClick:()=>{A===t?(s(""),l("")):(s(t),l(p[t]))},className:`px-4 py-2 rounded-lg border font-medium ${A===t?"bg-red-500 text-white":"bg-white hover:bg-red-100 text-red-500 border-red-500"}`,children:t.charAt(0).toUpperCase()+t.slice(1)},t))})]}),e.jsxs("div",{className:"relative mb-6",children:[e.jsx("label",{htmlFor:"message",className:"block text-gray-700 mb-2",children:"Votre message :"}),e.jsx("textarea",{id:"message",className:"w-full border border-gray-300 rounded-md p-4 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none overflow-hidden",style:{minHeight:"300px",minWidth:"500px"},value:o,onChange:d}),e.jsxs("div",{className:"flex items-center gap-3 mt-2 flex-wrap",children:[e.jsx("button",{onClick:()=>_("bold"),children:e.jsx(ae,{className:"w-5 h-5 text-gray-600"})}),e.jsx("button",{onClick:()=>_("italic"),children:e.jsx(ie,{className:"w-5 h-5 text-gray-600"})}),e.jsx("button",{onClick:()=>_("underline"),children:e.jsx(he,{className:"w-5 h-5 text-gray-600"})}),e.jsxs("button",{onClick:U,className:"flex items-center gap-1 text-blue-600 text-sm hover:underline",children:[e.jsx(fe,{className:"w-5 h-5"}),"Corriger"]}),e.jsxs("div",{className:"flex items-center gap-1 text-green-700",children:[e.jsx(de,{className:"w-5 h-5"}),e.jsx("label",{htmlFor:"langues",className:"text-sm",children:"Traduire en"}),e.jsxs("select",{id:"langues",className:"border border-gray-300 rounded px-2 py-1 text-sm",onChange:t=>V(t.target.value),children:[e.jsx("option",{value:"",children:"Langue"}),e.jsx("option",{value:"Arabe",children:"Arabe"}),e.jsx("option",{value:"Allemand",children:"Allemand"}),e.jsx("option",{value:"Anglais",children:"Anglais"}),e.jsx("option",{value:"Mandarin",children:"Mandarin"}),e.jsx("option",{value:"Espagnol",children:"Espagnol"}),e.jsx("option",{value:"Français",children:"Français"}),e.jsx("option",{value:"Italien",children:"Italien"}),e.jsx("option",{value:"Japonais",children:"Japonais"}),e.jsx("option",{value:"Portugais",children:"Portugais"}),e.jsx("option",{value:"Russe",children:"Russe"})]})]}),e.jsx("span",{className:"ml-auto",children:e.jsx(ye,{gestionFichier:C})})]})]}),e.jsx("label",{htmlFor:"publish-select",children:"Choisissez une action : "}),e.jsxs("select",{id:"publish-select",className:"bg-[#FF0035] hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md w-fit mt-4",value:c,onChange:h,children:[e.jsx("option",{value:"",disabled:!0,children:"-- Sélectionnez une option --"}),e.jsx("option",{value:"maintenant",children:"Publier Maintenant"}),e.jsx("option",{value:"planifier",children:"Planifier"}),e.jsx("option",{value:"best",children:"Publier au meilleur moment"})]}),e.jsx("button",{onClick:f,className:"ml-4 bg-[#FF0035] hover:bg-red-700 text-white py-2 px-6 rounded-lg shadow",children:"Publier"}),(c==="planifier"||c==="best")&&e.jsxs("div",{className:"mt-4",children:[e.jsx("label",{className:"block text-gray-700 mb-2",htmlFor:"schedule-date",children:c==="best"?"Créneau optimal détecté :":"Choisissez la date de planification :"}),e.jsx("input",{id:"schedule-date",type:"datetime-local",ref:N,value:b,onChange:t=>w(t.target.value),className:"border p-2 rounded-md",disabled:c==="best"})]})]})})}),e.jsxs("div",{className:"w-1/3 fixed right-0 top-16 h-screen overflow-y-auto p-6 border-l bg-white",children:[e.jsx("h2",{className:"text-xl font-semibold mb-4",children:"Prévisualisation"}),u.length===0?e.jsxs("div",{className:"flex flex-col items-center justify-center h-full text-gray-400",children:[e.jsx(oe,{className:"w-12 h-12 mb-4 text-gray-300"}),e.jsx("p",{className:"text-lg font-medium",children:"Rien à voir pour l'instant..."}),e.jsx("p",{className:"text-sm",children:"Sélectionnez un compte pour voir l’aperçu"})]}):u.map((t,n)=>e.jsx(Q,{platform:t.platform||t,text:o,image:x?URL.createObjectURL(x):null},n))]})]})}export{ze as default};
