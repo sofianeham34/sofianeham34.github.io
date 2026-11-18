@@ -20,7 +20,7 @@ export function Header({ lang, alt }: { lang: Lang; alt: string }) {
       <header className="site-header">
         <div className="wrap header-row">
           <Link href={home} className="brand">
-            sofiane-hammar
+            Sofiane Hammar
           </Link>
           <nav aria-label={lang === "fr" ? "Sections" : "Sections"} className="nav">
             {anchors.map(([id, label]) => (
@@ -45,7 +45,7 @@ export function Footer({ lang }: { lang: Lang }) {
   return (
     <footer className="site-footer">
       <div className="wrap footer-row">
-        <span>© 2026 Sofiane Hammar</span>
+        <span>© 2026 Sofiane Hammar · Montpellier</span>
         <span>{tr(ui.footer, lang)}</span>
       </div>
     </footer>

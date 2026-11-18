@@ -21,7 +21,7 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
           <span>{p.slug}</span>
         </nav>
 
-        <header className="project-head">
+        <header className="project-head fade">
           <p className="kicker">{tr(p.kind, lang)}</p>
           <h1>{tr(p.title, lang)}</h1>
           <p className="lead">{tr(p.tagline, lang)}</p>
@@ -56,23 +56,22 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
         </header>
 
           <div className="project-body">
-            <section id="probleme" aria-labelledby="h-probleme">
+            <section data-reveal id="probleme" aria-labelledby="h-probleme">
               <h2 id="h-probleme">{tr(P.problem, lang)}</h2>
               <p className="problem">{tr(p.problem, lang)}</p>
             </section>
 
-            <section id="demo" aria-labelledby="h-demo">
+            <section data-reveal id="demo" aria-labelledby="h-demo">
               <h2 id="h-demo">{tr(P.demo, lang)}</h2>
               <Demo p={p} lang={lang} />
             </section>
 
-            <section id="fonctionnalites" aria-labelledby="h-fonc">
+            <section data-reveal id="fonctionnalites" aria-labelledby="h-fonc">
               <h2 id="h-fonc">{tr(P.features, lang)}</h2>
               <ol className="features">
-                {p.features.map((f, i) => (
-                  <li key={f.title.fr} className={f.image ? (f.image.h > f.image.w ? "has-img tall" : "has-img") : undefined}>
+                {p.features.map((f) => (
+                  <li key={f.title.fr} data-reveal className={f.image ? (f.image.h > f.image.w ? "has-img tall" : "has-img") : undefined}>
                     <div className="feature-text">
-                      <span className="feature-num">{String(i + 1).padStart(2, "0")}</span>
                       <h3>{tr(f.title, lang)}</h3>
                       <p>{tr(f.text, lang)}</p>
                     </div>
@@ -84,13 +83,13 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
               </ol>
             </section>
 
-            <section id="architecture" aria-labelledby="h-archi">
+            <section data-reveal id="architecture" aria-labelledby="h-archi">
               <h2 id="h-archi">{tr(P.architecture, lang)}</h2>
               <Diagram arch={p.architecture} lang={lang} />
             </section>
 
             {p.research && (
-              <section id="etat-de-l-art" aria-labelledby="h-research">
+              <section data-reveal id="etat-de-l-art" aria-labelledby="h-research">
                 <h2 id="h-research">{tr(P.research, lang)}</h2>
                 <p className="problem">{tr(p.research.intro, lang)}</p>
                 <dl className="stats">
@@ -134,7 +133,7 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
               </section>
             )}
 
-            <section id="decisions" aria-labelledby="h-dec">
+            <section data-reveal id="decisions" aria-labelledby="h-dec">
               <h2 id="h-dec">{tr(P.decisions, lang)}</h2>
               <ol className="decisions">
                 {p.decisions.map((d) => (
@@ -148,7 +147,7 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
               </ol>
             </section>
 
-            <section id="technologies" aria-labelledby="h-tech">
+            <section data-reveal id="technologies" aria-labelledby="h-tech">
               <h2 id="h-tech">{tr(P.tech, lang)}</h2>
               <ul className="tech">
                 {p.tech.map((x) => (
@@ -160,7 +159,7 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
               </ul>
             </section>
 
-            <Link href={projectHref(lang, next.slug)} className="next">
+            <Link href={projectHref(lang, next.slug)} className="next" data-reveal>
               <span className="label">{tr(P.next, lang)}</span>
               <span className="next-title">{tr(next.title, lang)} →</span>
               <span className="muted">{tr(next.tagline, lang)}</span>

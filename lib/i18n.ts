@@ -18,7 +18,7 @@ export const launchHref = (lang: Lang, slug: string) => href(lang, `/lancement/$
 export const ui = {
   nav: {
     projects: { fr: "Projets", en: "Projects" },
-    stack: { fr: "Stack", en: "Stack" },
+    stack: { fr: "Compétences", en: "Skills" },
     path: { fr: "Parcours", en: "Background" },
     contact: { fr: "Contact", en: "Contact" },
   },
@@ -26,8 +26,8 @@ export const ui = {
   theme: { fr: "Changer de thème", en: "Toggle theme" },
   langSwitch: { fr: "English version", en: "Version française" },
   available: {
-    fr: "Disponible · stage de fin d'études de 6 mois · dès février 2027",
-    en: "Available · 6-month end-of-studies internship · from February 2027",
+    fr: "Disponible pour un stage de fin d'études de 6 mois, dès février 2027.",
+    en: "Available for a 6-month end-of-studies internship, from February 2027.",
   },
   cv: { fr: "Télécharger le CV", en: "Download CV (French)" },
   contactMe: { fr: "Me contacter", en: "Get in touch" },
@@ -38,7 +38,7 @@ export const ui = {
   code: { fr: "Code source", en: "Source code" },
   sections: {
     projects: { fr: "Projets", en: "Projects" },
-    stack: { fr: "Stack", en: "Stack" },
+    stack: { fr: "Compétences", en: "Skills" },
     path: { fr: "Parcours", en: "Background" },
     contact: { fr: "Contact", en: "Contact" },
   },
@@ -73,7 +73,7 @@ export const ui = {
     onThisPage: { fr: "Sur cette page", en: "On this page" },
   },
   footer: {
-    fr: "Site statique construit avec Next.js et hébergé sur GitHub Pages.",
-    en: "Static site built with Next.js, hosted on GitHub Pages.",
+    fr: "Conçu et développé par Sofiane Hammar. Next.js, hébergé sur GitHub Pages.",
+    en: "Designed and built by Sofiane Hammar. Next.js, hosted on GitHub Pages.",
   },
 } satisfies Record<string, unknown>;

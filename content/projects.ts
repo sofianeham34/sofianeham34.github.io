@@ -86,8 +86,8 @@ export const projects: Project[] = [
       kind: "live",
       url: "https://recrutement-multi-agents.onrender.com",
       note: {
-        fr: "La vraie application : vrais agents, vraie recherche de profils publics, LLM gratuit. Quelques recherches par jour, de 3 à 5 minutes chacune ; le premier chargement peut prendre une minute si elle était en veille.",
-        en: "The real application: real agents, a real search of public profiles, a free LLM. A few searches a day, 3 to 5 minutes each; the first load can take a minute if it was asleep.",
+        fr: "L'application est en ligne : lancez une recherche à partir d'une fiche de poste, choisissez les candidats, lisez les messages rédigés. Quelques recherches par jour, de 3 à 5 minutes chacune ; le premier chargement peut prendre une minute si elle était en veille.",
+        en: "The application is online: start a search from a job description, pick the candidates, read the drafted messages. A few searches a day, 3 to 5 minutes each; the first load can take a minute if it was asleep.",
       },
     },
     features: [
@@ -313,8 +313,8 @@ export const projects: Project[] = [
         { src: "/img/traveling/travelpath-parcours.webp", label: { fr: "Parcours", en: "Route" } },
       ],
       note: {
-        fr: "Parcourez les écrans, essayez la vraie application sur un téléphone virtuel dans un nouvel onglet (quelques secondes de chargement), ou installez l'APK sur un téléphone Android 7.0 ou plus récent.",
-        en: "Browse the screens, try the real app on a virtual phone in a new tab (takes a few seconds), or install the APK on an Android 7.0+ phone.",
+        fr: "Parcourez les écrans, essayez l'application sur un téléphone virtuel dans un nouvel onglet (quelques secondes de chargement), ou installez l'APK sur un téléphone Android 7.0 ou plus récent.",
+        en: "Browse the screens, try the app on a virtual phone in a new tab (takes a few seconds), or install the APK on an Android 7.0+ phone.",
       },
     },
     features: [
@@ -453,8 +453,8 @@ export const projects: Project[] = [
       src: "/demos/ascendia/index.html#/",
       theme: "light",
       note: {
-        fr: "Version sans serveur : créez un compte avec n'importe quel identifiant. Les données sont fictives et la connexion aux réseaux est simulée ; la correction et la traduction appellent de vraies API gratuites.",
-        en: "Serverless version: sign up with any credentials. Data is fictional and network login is simulated; correction and translation call real free APIs.",
+        fr: "Version sans serveur : créez un compte avec n'importe quel identifiant, puis reliez un réseau dans « Mes réseaux » (connexion simulée, avec des publications de démonstration). La correction et la traduction appellent de vraies API.",
+        en: "Serverless version: sign up with any credentials, then link a network under \"Mes réseaux\" (simulated login, with demo posts). Correction and translation call real APIs.",
       },
     },
     features: [

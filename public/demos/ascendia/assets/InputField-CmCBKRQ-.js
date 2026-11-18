@@ -1,0 +1,1 @@
+import{j as s}from"./main-CCi1gvuP.js";const t=({type:r,placeholder:o,name:e,onChange:n})=>s.jsx("input",{type:r,name:e,onChange:n,className:"w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500",placeholder:o});export{t as I};

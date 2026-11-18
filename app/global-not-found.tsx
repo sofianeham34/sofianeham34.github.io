@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { mono, sans } from "@/lib/fonts";
+import { fontClasses } from "@/lib/fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = { title: "Page introuvable — Sofiane Hammar" };
 
 export default function GlobalNotFound() {
   return (
-    <html lang="fr" className={`${sans.variable} ${mono.variable}`}>
+    <html lang="fr" className={fontClasses}>
       <body>
         <main className="wrap notfound">
           <p className="section-num">404</p>

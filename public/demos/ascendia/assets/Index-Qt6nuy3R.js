@@ -1,0 +1,1 @@
+import{j as t,N as o}from"./main-CCi1gvuP.js";import e from"./HomePage-gFRA-qaa.js";import"./index-Cj6O74SS.js";import"./index-B3dWSFc0.js";const i=()=>localStorage.getItem("token")?t.jsx(o,{to:"/dashboard"}):t.jsx(e,{});export{i as default};
