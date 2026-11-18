@@ -2,7 +2,6 @@ import Link from "next/link";
 import { projects } from "@/content/projects";
 import { education, experience, site, stack, type Step } from "@/content/site";
 import { href, projectHref, tr, ui, type Lang } from "@/lib/i18n";
-import { AgentRun } from "./AgentRun";
 import { CopyEmail } from "./CopyEmail";
 import { Img } from "./Img";
 import { Footer, Header } from "./Header";
@@ -10,7 +9,6 @@ import { Footer, Header } from "./Header";
 const num = (n: number) => String(n).padStart(2, "0");
 
 export function Home({ lang }: { lang: Lang }) {
-  const [featured, ...others] = projects;
   const byslug = Object.fromEntries(projects.map((p) => [p.slug, p]));
 
   return (
@@ -41,31 +39,19 @@ export function Home({ lang }: { lang: Lang }) {
           <SectionHead n={1} id="projets-titre" title={tr(ui.sections.projects, lang)} />
 
           <div className="works">
-            <article className="work">
-              <WorkHead
-                n={1}
-                kicker={tr(ui.featured, lang)}
-                title={tr(featured.title, lang)}
-                lead={tr(featured.tagline, lang)}
-                to={projectHref(lang, featured.slug)}
-                cta={tr(ui.seeProject, lang)}
-                code={featured.links[0].url}
-                codeLabel={tr(ui.code, lang)}
-              />
-              <AgentRun lang={lang} />
-            </article>
-
-            {others.map((p, i) => (
+            {projects.map((p, i) => (
               <article key={p.slug} className="work">
                 <WorkHead
-                  n={i + 2}
-                  kicker={tr(p.kind, lang)}
+                  n={i + 1}
+                  kicker={i === 0 ? tr(ui.featured, lang) : tr(p.kind, lang)}
                   title={tr(p.title, lang)}
                   lead={tr(p.tagline, lang)}
                   to={projectHref(lang, p.slug)}
-                  cta={tr(ui.tryIt, lang)}
+                  cta={tr(i === 0 ? ui.seeProject : ui.tryIt, lang)}
                   code={p.links[0].url}
                   codeLabel={tr(ui.code, lang)}
+                  live={p.demo.kind === "live" ? p.demo.url : undefined}
+                  liveLabel={tr(ui.tryLive, lang)}
                 />
                 <Link href={projectHref(lang, p.slug)} className="work-media" tabIndex={-1} aria-hidden="true">
                   <Img img={p.cover} alt="" sizes="(max-width: 1180px) 100vw, 1120px" />
@@ -142,7 +128,18 @@ export function Home({ lang }: { lang: Lang }) {
   );
 }
 
-function WorkHead(props: { n: number; kicker: string; title: string; lead: string; to: string; cta: string; code: string; codeLabel: string }) {
+function WorkHead(props: {
+  n: number;
+  kicker: string;
+  title: string;
+  lead: string;
+  to: string;
+  cta: string;
+  code: string;
+  codeLabel: string;
+  live?: string;
+  liveLabel?: string;
+}) {
   return (
     <header className="work-head">
       <p className="kicker">
@@ -155,6 +152,11 @@ function WorkHead(props: { n: number; kicker: string; title: string; lead: strin
         <p className="work-lead">{props.lead}</p>
         <p className="work-links">
           <Link href={props.to}>{props.cta} →</Link>
+          {props.live && (
+            <a href={props.live} target="_blank" rel="noopener noreferrer">
+              {props.liveLabel} ↗
+            </a>
+          )}
           <a href={props.code} target="_blank" rel="noopener noreferrer">
             {props.codeLabel} ↗
           </a>

@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { projects, type Project } from "@/content/projects";
 import { href, projectHref, tr, ui, type Lang } from "@/lib/i18n";
-import { AgentRun } from "./AgentRun";
-import { DemoFrame, PhoneDemo } from "./Demos";
+import { DemoFrame, LiveDemo, PhoneDemo } from "./Demos";
 import { Diagram } from "./Diagram";
 import { Footer, Header } from "./Header";
 import { Img } from "./Img";
@@ -173,30 +172,9 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
   );
 }
 
-const live = {
-  text: {
-    fr: "Ci-dessus, une exécution rejouée. La vraie application est aussi en ligne : vrais agents, vraie recherche de profils publics, LLM gratuit. Quelques recherches par jour, de 3 à 5 minutes chacune ; le premier chargement peut prendre une minute si elle était en veille.",
-    en: "Above is a replayed run. The real application is online too: real agents, a real search of public profiles, a free LLM. A few searches a day, 3 to 5 minutes each; the first load can take a minute if it was asleep.",
-  },
-  cta: { fr: "Tester la vraie application", en: "Try the real application" },
-};
-
 function Demo({ p, lang }: { p: Project; lang: Lang }) {
   const d = p.demo;
-  if (d.kind === "agents")
-    return (
-      <>
-        <AgentRun lang={lang} />
-        {d.live && (
-          <div className="live-demo">
-            <p>{tr(live.text, lang)}</p>
-            <a className="btn primary" href={d.live} target="_blank" rel="noopener noreferrer">
-              ▶ {tr(live.cta, lang)} ↗
-            </a>
-          </div>
-        )}
-      </>
-    );
+  if (d.kind === "live") return <LiveDemo url={d.url} poster={p.cover} note={d.note} lang={lang} />;
   if (d.kind === "iframe")
     return (
       <>

@@ -31,6 +31,7 @@ export const ui = {
   featured: { fr: "Projet phare", en: "Featured project" },
   seeProject: { fr: "Voir le projet", en: "View project" },
   tryIt: { fr: "Tester", en: "Try it" },
+  tryLive: { fr: "Tester l'application en ligne", en: "Try the live app" },
   code: { fr: "Code source", en: "Source code" },
   sections: {
     projects: { fr: "Projets", en: "Projects" },

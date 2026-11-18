@@ -11,6 +11,8 @@ const t = {
   apk: { fr: "Télécharger l'APK", en: "Download the APK" },
   start: { fr: "Essayer sur un téléphone virtuel", en: "Try it on a virtual phone" },
   screens: { fr: "Écrans de l'application", en: "App screens" },
+  live: { fr: "Tester l'application en ligne", en: "Try the live app" },
+  open: { fr: "Ouvrir ↗", en: "Open ↗" },
 } as const;
 
 /** Démo web chargée seulement au clic, pour garder la page légère. */
@@ -42,6 +44,34 @@ export function DemoFrame({ src, theme, title, poster, lang }: { src: string; th
         )}
       </div>
     </div>
+  );
+}
+
+/** Application hébergée sur un serveur : capture cliquable qui ouvre la version en ligne. */
+export function LiveDemo({ url, poster, note, lang }: { url: string; poster: ImgData; note: L; lang: Lang }) {
+  return (
+    <>
+      <div className="browser theme-light">
+        <div className="browser-bar">
+          <span className="dots" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span className="url">{url.replace(/^https:\/\//, "")}</span>
+          <a href={url} target="_blank" rel="noopener noreferrer" className="full">
+            {t.open[lang]}
+          </a>
+        </div>
+        <div className="browser-view">
+          <a className="poster" href={url} target="_blank" rel="noopener noreferrer">
+            <Img img={poster} alt="" sizes="(max-width: 960px) 100vw, 880px" />
+            <span className="play">▶ {t.live[lang]} ↗</span>
+          </a>
+        </div>
+      </div>
+      <p className="demo-note">{note[lang]}</p>
+    </>
   );
 }
 

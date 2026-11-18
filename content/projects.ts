@@ -6,9 +6,8 @@ import type { L } from "@/lib/i18n";
 export type Img = { src: string; alt: L; w: number; h: number };
 
 export type Demo =
-  /** Rejoue le graphe d'agents avec des données enregistrées (components/AgentRun) ;
-   *  `live` : adresse de la vraie application hébergée, si elle est en ligne. */
-  | { kind: "agents"; live?: string }
+  /** Application hébergée ailleurs (serveur Python) : capture cliquable et lien vers la version en ligne. */
+  | { kind: "live"; url: string; note: L }
   /** Application web compilée en version statique, servie depuis public/demos. */
   | { kind: "iframe"; src: string; theme: "light" | "dark"; note: L }
   /** Application Android : téléphone virtuel Appetize si une clé est fournie, sinon parcours des écrans. */
@@ -83,7 +82,14 @@ export const projects: Project[] = [
       { fr: "monolithe ou microservices", en: "monolith or microservices" },
     ],
     cover: { src: "/img/multi-agents/interface.webp", alt: { fr: "Interface web du système multi-agents", en: "Web interface of the multi-agent system" }, w: 1440, h: 900 },
-    demo: { kind: "agents", live: "https://recrutement-multi-agents.onrender.com" },
+    demo: {
+      kind: "live",
+      url: "https://recrutement-multi-agents.onrender.com",
+      note: {
+        fr: "La vraie application : vrais agents, vraie recherche de profils publics, LLM gratuit. Quelques recherches par jour, de 3 à 5 minutes chacune ; le premier chargement peut prendre une minute si elle était en veille.",
+        en: "The real application: real agents, a real search of public profiles, a free LLM. A few searches a day, 3 to 5 minutes each; the first load can take a minute if it was asleep.",
+      },
+    },
     features: [
       {
         title: { fr: "Pipeline de bout en bout", en: "End-to-end pipeline" },
@@ -91,7 +97,7 @@ export const projects: Project[] = [
           fr: "De la fiche de poste au rapport final : analyse du besoin, recherche, filtrage, évaluation, messages de contact personnalisés. Le suivi des agents s'affiche en direct dans l'interface.",
           en: "From job description to final report: needs analysis, search, filtering, scoring and personalised outreach. Each agent's progress is shown live in the interface.",
         },
-        image: { src: "/img/multi-agents/interface.webp", alt: { fr: "Suivi des agents dans l'interface web", en: "Agent tracking in the web interface" }, w: 1440, h: 900 },
+        image: { src: "/img/multi-agents/suivi.webp", alt: { fr: "Recherche en cours : avancement des agents et choix des candidats", en: "Search in progress: agent progress and candidate selection" }, w: 1440, h: 900 },
       },
       {
         title: { fr: "Évaluation en parallèle, puis contre-vérification", en: "Parallel scoring, then cross-checking" },
