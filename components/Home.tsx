@@ -11,8 +11,21 @@ const num = (n: number) => String(n).padStart(2, "0");
 export function Home({ lang }: { lang: Lang }) {
   const byslug = Object.fromEntries(projects.map((p) => [p.slug, p]));
 
+  // Fiche « Person » : relie le nom au site, au LinkedIn et au GitHub dans les moteurs de recherche.
+  const person = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: site.name,
+    url: site.url,
+    jobTitle: lang === "fr" ? "Développeur logiciel, étudiant en Master 2 Génie logiciel" : "Software developer, MSc Software Engineering student",
+    email: `mailto:${site.email}`,
+    sameAs: [site.linkedin, site.github],
+    alumniOf: { "@type": "CollegeOrUniversity", name: "Université de Montpellier" },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
       <Header lang={lang} alt={href(lang === "fr" ? "en" : "fr")} />
       <main id="contenu">
         {/* ---------- Accroche ---------- */}
