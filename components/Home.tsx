@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { projects } from "@/content/projects";
 import { education, experience, site, stack, type Step } from "@/content/site";
-import { href, projectHref, tr, ui, type Lang } from "@/lib/i18n";
+import { href, launchHref, projectHref, tr, ui, type Lang } from "@/lib/i18n";
 import { CopyEmail } from "./CopyEmail";
 import { Img } from "./Img";
+import { WarmUp } from "./Launch";
 import { Footer, Header } from "./Header";
 
 const num = (n: number) => String(n).padStart(2, "0");
@@ -26,6 +27,7 @@ export function Home({ lang }: { lang: Lang }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
+      {projects.map((p) => p.demo.kind === "live" && <WarmUp key={p.slug} url={p.demo.url} />)}
       <Header lang={lang} alt={href(lang === "fr" ? "en" : "fr")} />
       <main id="contenu">
         {/* ---------- Accroche ---------- */}
@@ -63,7 +65,7 @@ export function Home({ lang }: { lang: Lang }) {
                   cta={tr(i === 0 ? ui.seeProject : ui.tryIt, lang)}
                   code={p.links[0].url}
                   codeLabel={tr(ui.code, lang)}
-                  live={p.demo.kind === "live" ? p.demo.url : undefined}
+                  live={p.demo.kind === "live" ? launchHref(lang, p.slug) : undefined}
                   liveLabel={tr(ui.tryLive, lang)}
                 />
                 <Link href={projectHref(lang, p.slug)} className="work-media" tabIndex={-1} aria-hidden="true">
@@ -166,7 +168,7 @@ function WorkHead(props: {
         <p className="work-links">
           <Link href={props.to}>{props.cta} →</Link>
           {props.live && (
-            <a href={props.live} target="_blank" rel="noopener noreferrer">
+            <a href={props.live} target="_blank" rel="noopener">
               {props.liveLabel} ↗
             </a>
           )}

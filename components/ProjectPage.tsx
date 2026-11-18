@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { projects, type Project } from "@/content/projects";
-import { href, projectHref, tr, ui, type Lang } from "@/lib/i18n";
+import { href, launchHref, projectHref, tr, ui, type Lang } from "@/lib/i18n";
 import { DemoFrame, LiveDemo, PhoneDemo } from "./Demos";
 import { Diagram } from "./Diagram";
 import { Footer, Header } from "./Header";
@@ -174,7 +174,7 @@ export function ProjectPage({ project: p, lang }: { project: Project; lang: Lang
 
 function Demo({ p, lang }: { p: Project; lang: Lang }) {
   const d = p.demo;
-  if (d.kind === "live") return <LiveDemo url={d.url} poster={p.cover} note={d.note} lang={lang} />;
+  if (d.kind === "live") return <LiveDemo url={d.url} launch={launchHref(lang, p.slug)} poster={p.cover} note={d.note} lang={lang} />;
   if (d.kind === "iframe")
     return (
       <>

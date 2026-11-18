@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Img as ImgData } from "@/content/projects";
 import type { L, Lang } from "@/lib/i18n";
 import { Img } from "./Img";
+import { WarmUp } from "./Launch";
 
 const t = {
   launch: { fr: "Lancer la démo", en: "Launch the demo" },
@@ -48,9 +49,10 @@ export function DemoFrame({ src, theme, title, poster, lang }: { src: string; th
 }
 
 /** Application hébergée sur un serveur : capture cliquable qui ouvre la version en ligne. */
-export function LiveDemo({ url, poster, note, lang }: { url: string; poster: ImgData; note: L; lang: Lang }) {
+export function LiveDemo({ url, launch, poster, note, lang }: { url: string; launch: string; poster: ImgData; note: L; lang: Lang }) {
   return (
     <>
+      <WarmUp url={url} />
       <div className="browser theme-light">
         <div className="browser-bar">
           <span className="dots" aria-hidden="true">
@@ -59,12 +61,12 @@ export function LiveDemo({ url, poster, note, lang }: { url: string; poster: Img
             <i />
           </span>
           <span className="url">{url.replace(/^https:\/\//, "")}</span>
-          <a href={url} target="_blank" rel="noopener noreferrer" className="full">
+          <a href={launch} target="_blank" rel="noopener" className="full">
             {t.open[lang]}
           </a>
         </div>
         <div className="browser-view">
-          <a className="poster" href={url} target="_blank" rel="noopener noreferrer">
+          <a className="poster" href={launch} target="_blank" rel="noopener">
             <Img img={poster} alt="" sizes="(max-width: 960px) 100vw, 880px" />
             <span className="play">▶ {t.live[lang]} ↗</span>
           </a>

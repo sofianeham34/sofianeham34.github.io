@@ -1115,3 +1115,73 @@ button {
   font-size: 48px;
   letter-spacing: -0.03em;
 }
+
+/* ---------- Écran de chargement d'une application hébergée ---------- */
+.launch {
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: var(--gutter);
+}
+
+.launch-box {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  max-width: 52ch;
+  text-align: center;
+}
+
+.launch-box h1 {
+  margin: 8px 0 0;
+  font-size: clamp(24px, 4vw, 34px);
+  line-height: 1.15;
+}
+
+.launch-spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--line);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: launch-spin 0.9s linear infinite;
+}
+
+@keyframes launch-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-spinner {
+    animation-duration: 3s;
+  }
+}
+
+.launch-step {
+  margin: 0;
+  font-size: 17px;
+}
+
+.launch-time {
+  margin-left: 6px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.launch-why {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.launch-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 10px 0 0;
+  font-size: 14px;
+}

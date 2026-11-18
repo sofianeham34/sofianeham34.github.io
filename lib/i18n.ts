@@ -11,6 +11,9 @@ export const href = (lang: Lang, path = "/") =>
 
 export const projectHref = (lang: Lang, slug: string) => href(lang, `/projets/${slug}/`);
 
+/** Écran de chargement du portfolio qui ouvre une application hébergée ailleurs une fois réveillée. */
+export const launchHref = (lang: Lang, slug: string) => href(lang, `/lancement/${slug}/`);
+
 /** Libellés de l'interface. */
 export const ui = {
   nav: {
